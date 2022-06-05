@@ -1,0 +1,15 @@
+server:
+  port: 8189
+  servlet:
+    context-path: /exchange-rates-service
+exchange-rates-service:
+  giphy-api:
+    url: ${GIPHY_API_URL:https://api.giphy.com/v1/gifs}
+    api-key: ${GIPHY_API_KEY}
+  giphy-media:
+    url: https://media0.giphy.com/media
+  open-exchange-rates-api:
+    url: ${OPEN_EXCHANGE_RATES_API_URL:https://openexchangerates.org/api}
+    app-id: ${OPEN_EXCHANGE_RATES_API_APP_ID}
+  currency:
+    compare-currency: ${COMPARE_CURRENCY:USD}
