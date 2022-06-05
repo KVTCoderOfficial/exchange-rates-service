@@ -1,7 +1,7 @@
 # exchange-rates-service
 Сервис, который обращается к сервису курсов валют, и отображает gif.
 
-API Endpoint - http://localhost:8189/exchange-rates-service/api/v1/exchange-rates/dynamic-gif?currency=(выбранная валюта, например RUB)
+API Endpoint - http://localhost:8189/exchange-rates-service/api/v1/exchange-rates/dynamic-gif?currency= (выбранная валюта, например RUB)
 
 Если курс по отношению к выбранной валюте (по умолчанию USD) за сегодня равен или стал выше вчерашнего, то отдается рандомная отсюда https://giphy.com/search/rich
 
