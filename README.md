@@ -29,6 +29,7 @@ OPEN_EXCHANGE_RATES_API_URL=(адрес АПИ сайта курсов валю�
 COMPARE_CURRENCY=(валюта, по отношению к которой смотрится курс) - необязательный параметр, по умолчанию равен USD
 
 Команды:
+
 а)docker build -t exchange-rates-service .
 
 б)docker run -p 8189:8189 -d -e GIPHY_API_KEY=(API Key) -e OPEN_EXCHANGE_RATES_API_APP_ID=(App ID) exchange-rates-service
