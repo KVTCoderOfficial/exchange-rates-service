@@ -11,12 +11,17 @@ REST API курсов валют - https://docs.openexchangerates.org/
 
 REST API гифок - https://developers.giphy.com/docs/api#quick-start-guide
 
-
 Для запуска программы:
 
-1)Сделайте сборку проекта (gradle build), проект будет находиться в директории \build\libs с названием exchange-rates-service-0.0.1-SNAPSHOT.jar;
+1)Сделайте сборку проекта (gradle build), проект будет находиться в директории \build\libs с названием exchange-rates-service-0.0.1-SNAPSHOT.jar
 
-2)Запустите докер и введите следующие команды, указав начальные параметры:
+2)Введите команду для создания докер образа
+
+docker build -t exchange-rates-service .
+
+3)Введите команду для запуска докер образа, указав начальные параметры:
+
+docker run -p 8189:8189 -d -e GIPHY_API_KEY=(API Key) -e OPEN_EXCHANGE_RATES_API_APP_ID=(App ID) exchange-rates-service
 
 Параметры:
 
@@ -30,20 +35,13 @@ OPEN_EXCHANGE_RATES_API_URL=(адрес АПИ сайта курсов валю�
 
 COMPARE_CURRENCY=(валюта, по отношению к которой смотрится курс) - необязательный параметр, по умолчанию равен USD
 
-Команды:
-
-а)docker build -t exchange-rates-service .
-
-б)docker run -p 8189:8189 -d -e GIPHY_API_KEY=(API Key) -e OPEN_EXCHANGE_RATES_API_APP_ID=(App ID) exchange-rates-service
-
 Со всеми параметрами:
 
 docker run -p 8189:8189 -d -e GIPHY_API_KEY=(API Key) -e OPEN_EXCHANGE_RATES_API_APP_ID=(App ID) -e GIPHY_API_URL=(API Url) -e OPEN_EXCHANGE_RATES_API_URL=(API Url) -e COMPARE_CURRENCY=(Currency) exchange-rates-service
 
-
 Для запуска программы без докера:
 
-1)Сделайте сборку проекта (gradle build), проект будет находиться в директории \build\libs с названием exchange-rates-service-0.0.1-SNAPSHOT.jar;
+1)Сделайте сборку проекта (gradle build), проект будет находиться в директории \build\libs с названием exchange-rates-service-0.0.1-SNAPSHOT.jar
 
 2)Запустите приложение, указав начальные параметры
 
